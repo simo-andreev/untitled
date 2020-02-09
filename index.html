@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disnamed</title>
+
+    <style>
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+        }
+
+        html {
+            font-family: "Ubuntu Mono", monospace;
+            font-variant-emoji: auto;
+            margin-bottom: 10px;
+        }
+
+        body {
+            background: radial-gradient(circle at center, #333, #333, #222 75%) fixed;
+            /*background: black fixed;*/
+        }
+
+        .icon {
+            font-family: "Material Icons", sans-serif;
+            font-weight: normal;
+        }
+
+        a.button:link, a.button:visited {
+            font-size: 24px;
+            vertical-align: middle;
+            /*background-color: crimson;*/
+            background-color: mediumseagreen;
+            color: white;
+            padding: 16px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        a.button:hover, a.button:active {
+            display: compact;
+            color: #ebebeb;
+            /*background-color: #c8143c;*/
+            background-color: seagreen;
+            box-shadow: 3px 3px 10px -3px black;
+        }
+
+
+        div.prj {
+            width: 100px;
+            height: 140px;
+            /*background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);*/
+            margin: 15px auto;
+            border-radius: 12px;
+            animation: example 5s alternate ease-in-out infinite;
+        }
+
+
+        #gbh_logo {
+            filter: drop-shadow(0px 0px 5px black);
+            /*border-radius: 100px;*/
+            margin: auto;
+            display: block;
+            width: 190px;
+            /*outline-style: groove;*/
+            padding: 5px 5px 5px 5px;
+            /*background: mediumseagreen;*/
+            /*background: radial-gradient(circle at 50%, mediumseagreen 60%, rgba(0, 0, 0, 0) 50%);*/
+        }
+
+        #gbh_logo:hover {
+            filter: drop-shadow(10px 10px 10px black) /*brightness(80%)*/;
+            perspective: 800px;
+            padding: 0 10px 10px 0;
+            animation: scale 0.5s alternate ease-in infinite;
+            /*background: radial-gradient(circle at 50%, seagreen 60%, rgba(0, 0, 0, 0) 50%);*/
+            /*background: seagreen;*/
+        }
+
+        #gbh_logo:active {
+            filter: brightness(50%) drop-shadow(10px 10px 10px black);
+        }
+
+
+        .bottom {
+            position: fixed;
+            bottom: 0;
+            margin-bottom: 10px;
+        }
+
+        .bottom.left {
+            left: 0;
+            margin-left: 10px;
+        }
+
+        .bottom.right {
+            right: 0;
+            margin-right: 10px;
+        }
+
+        .bottom.middle {
+            position: fixed;
+            width: 200px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @keyframes scale {
+            from {
+                transform: scale(1.00, 1.00);
+            }
+            to {
+                transform: scale(1.05, 0.95);
+            }
+        }
+
+        .diamond-narrow {
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-bottom: 70px solid darkseagreen;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -50px;
+        }
+
+        .diamond-narrow:after {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 70px;
+            border: 50px solid transparent;
+            border-top: 70px solid darkseagreen;
+        }
+
+        .project_logo {
+            width: 100px;
+            left: -50px;
+            position: absolute;
+        }
+
+        .fulcrum {
+            width: 200px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*outline-style: groove;*/
+        }
+
+
+        @keyframes rot_one {
+            from {
+                transform: rotate(-0deg) translate(300px) rotate(5deg) rotate3d(1, 1, 1, 45deg);
+            }
+            to {
+                transform: rotate(-0deg) translate(300px) rotate(5deg) rotate3d(1, 1, 1, -45deg);
+            }
+        }
+
+        @keyframes rot_two {
+            from {
+                transform: rotate(-30deg) translate(300px) rotate(35deg) rotate3d(1, 1, 1, 45deg);
+            }
+            to {
+                transform: rotate(-30deg) translate(300px) rotate(35deg) rotate3d(1, 1, 1, -45deg);
+            }
+        }
+
+        @keyframes rot_three {
+            from {
+                transform: rotate(-60deg) translate(300px) rotate(65deg) rotate3d(1, 1, 1, 45deg);
+            }
+            to {
+                transform: rotate(-60deg) translate(300px) rotate(65deg) rotate3d(1, 1, 1, -45deg);
+            }
+        }
+
+        @keyframes rot_four {
+            from {
+                transform: rotate(-90deg) translate(300px) rotate(90deg) rotate3d(1, 1, 1, 45deg);
+            }
+            to {
+                transform: rotate(-90deg) translate(300px) rotate(90deg) rotate3d(1, 1, 1, -45deg);
+            }
+        }
+
+        @keyframes rot_five {
+            from {
+                transform: rotate(-120deg) translate(300px) rotate(115deg) rotate3d(1, 1, 1, 45deg);
+            }
+            to {
+                transform: rotate(-120deg) translate(300px) rotate(115deg) rotate3d(1, 1, 1, -45deg);
+            }
+        }
+
+        @keyframes rot_six {
+            from {
+                transform: rotate(-150deg) translate(300px) rotate(145deg) rotate3d(1, 1, 1, 45deg);
+            }
+            to {
+                transform: rotate(-150deg) translate(300px) rotate(145deg) rotate3d(1, 1, 1, -45deg);
+            }
+        }
+
+        @keyframes rot_seven {
+            from {
+                transform: rotate(-180deg) translate(300px) rotate(175deg) rotate3d(1, 1, 1, 45deg);
+            }
+            to {
+                transform: rotate(-180deg) translate(300px) rotate(175deg) rotate3d(1, 1, 1, -45deg);
+            }
+        }
+
+        .one {
+            animation: rot_one 5s alternate ease-in-out infinite;
+        }
+
+        .two {
+
+            animation: rot_two 5s alternate ease-in-out infinite;
+        }
+
+        .three {
+            animation: rot_three 5s alternate ease-in-out infinite;
+        }
+
+        .four {
+            animation: rot_four 5s alternate ease-in-out infinite;
+        }
+
+        .five {
+            animation: rot_five 5s alternate ease-in-out infinite;
+        }
+
+        .six {
+            animation: rot_six 5s alternate ease-in-out infinite;
+        }
+
+        .seven {
+            animation: rot_seven 5s alternate ease-in-out infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<!--<div class="prj">-->
+<!--    <div class="diamond-narrow"></div>-->
+<!--    <img class="project_logo" src="Octocat.png"/>-->
+<!--</div>-->
+
+<!--<div class="prj">-->
+<!--    <div class="diamond-narrow"></div>-->
+<!--    <img class="project_logo" src="Octocat.png"/>-->
+<!--</div>-->
+
+<!--<div class="prj">-->
+<!--    <div class="diamond-narrow"></div>-->
+<!--    <img class="project_logo" src="Octocat.png"/>-->
+<!--</div>-->
+
+<div class="fulcrum">
+    <img id="gbh_logo" src="Octocat.png"/>
+
+    <div class="diamond-narrow one">
+        <img class="project_logo" src="Octocat.png"/>
+    </div>
+
+    <div class="diamond-narrow two">
+        <img class="project_logo" src="Octocat.png"/>
+    </div>
+
+    <div class="diamond-narrow three">
+        <img class="project_logo" src="Octocat.png"/>
+    </div>
+
+    <div class="diamond-narrow four">
+        <img class="project_logo" src="Octocat.png"/>
+    </div>
+
+    <div class="diamond-narrow five">
+        <img class="project_logo" src="Octocat.png"/>
+    </div>
+
+    <div class="diamond-narrow six">
+        <img class="project_logo" src="Octocat.png"/>
+    </div>
+
+    <div class="diamond-narrow seven">
+        <img class="project_logo" src="Octocat.png"/>
+    </div>
+</div>
+
+
+<a class="bottom left icon button" href="">adb</a>
+<a class="button bottom middle" href="index.html">Button Text</a>
+<a class="bottom right icon button" href="">adb</a>
+
+</body>
+</html>
